@@ -7,27 +7,27 @@ import { Route, RouteDocument } from './entities/route.entity';
 
 @Injectable()
 export class RoutesService {
-    constructor(
-        @InjectModel(Route.name) private routeModel: Model<RouteDocument>,
-    ) {}
+  constructor(
+    @InjectModel(Route.name) private routeModel: Model<RouteDocument>,
+  ) {}
 
-    create(createRouteDto: CreateRouteDto) {
-        return 'This action adds a new route';
-    }
+  create(createRouteDto: CreateRouteDto) {
+    return 'This action adds a new route';
+  }
 
-    findAll() {
-        return this.routeModel.find().exec();
-    }
+  findAll(): Promise<RouteDocument[]> {
+    return this.routeModel.find().exec();
+  }
 
-    findOne(id: number) {
-        return `This action returns a #${id} route`;
-    }
+  findOne(id: number) {
+    return `This action returns a #${id} route`;
+  }
 
-    update(id: number, updateRouteDto: UpdateRouteDto) {
-        return `This action updates a #${id} route`;
-    }
+  update(id: number, updateRouteDto: UpdateRouteDto) {
+    return `This action updates a #${id} route`;
+  }
 
-    remove(id: number) {
-        return `This action removes a #${id} route`;
-    }
+  remove(id: number) {
+    return `This action removes a #${id} route`;
+  }
 }

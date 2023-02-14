@@ -1,4 +1,4 @@
-module github.com/dalacorte/uber-made-in-china
+module github.com/codeedu/imersaofsfc2-simulator
 
 go 1.16
 
